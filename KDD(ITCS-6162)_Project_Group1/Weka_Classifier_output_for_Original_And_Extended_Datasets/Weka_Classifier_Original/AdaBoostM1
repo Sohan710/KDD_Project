@@ -1,0 +1,79 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.AdaBoostM1 -P 100 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump
+Relation:     average_ratings_original-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last
+Instances:    9053
+Attributes:   3
+              movieId
+              rating
+              Average Rating
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+AdaBoostM1: No boosting possible, one classifier used!
+Decision Stump
+
+Classifications
+
+rating = 3 : 3
+rating != 3 : 4
+rating is missing : 4
+
+Class distributions
+
+rating = 3
+0.5	1	1.5	2	2.5	3	3.5	4	4.5	5	
+0.0	0.0	0.0	0.0	0.0	1.0	0.0	0.0	0.0	0.0	
+rating != 3
+0.5	1	1.5	2	2.5	3	3.5	4	4.5	5	
+0.012669021805335608	0.02545986112803021	0.03252527713485199	0.07162870020708978	0.11804117432086735	0.08575953222073335	0.24034596174929954	0.2773784870264344	0.09209404312340115	0.04409794128395663	
+rating is missing
+0.5	1	1.5	2	2.5	3	3.5	4	4.5	5	
+0.011487904562023638	0.023086269744835967	0.029492985750579917	0.06495084502374904	0.10703634154423948	0.17099304098089033	0.21793880481608308	0.2515188335358445	0.08350822931624875	0.039986744725505355	
+
+
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3121               34.4748 %
+Incorrectly Classified Instances      5932               65.5252 %
+Kappa statistic                          0.1333
+Mean absolute error                      0.1499
+Root mean squared error                  0.2738
+Relative absolute error                 89.8385 %
+Root relative squared error             94.7878 %
+Total Number of Instances             9053     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    ?          0.000    ?          ?        0.536     0.012     0.5
+                 0.000    0.000    ?          0.000    ?          ?        0.545     0.025     1
+                 0.000    0.000    ?          0.000    ?          ?        0.544     0.032     1.5
+                 0.000    0.000    ?          0.000    ?          ?        0.548     0.071     2
+                 0.000    0.000    ?          0.000    ?          ?        0.551     0.118     2.5
+                 0.545    0.000    1.000      0.545    0.706      0.706    0.769     0.667     3
+                 0.000    0.000    ?          0.000    ?          ?        0.558     0.239     3.5
+                 1.000    0.875    0.277      1.000    0.434      0.186    0.561     0.276     4
+                 0.000    0.000    ?          0.000    ?          ?        0.549     0.092     4.5
+                 0.000    0.000    ?          0.000    ?          ?        0.547     0.044     5
+Weighted Avg.    0.345    0.220    ?          0.345    ?          ?        0.591     0.264     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g    h    i    j   <-- classified as
+    0    0    0    0    0    0    0  104    0    0 |    a = 0.5
+    0    0    0    0    0    0    0  209    0    0 |    b = 1
+    0    0    0    0    0    0    0  267    0    0 |    c = 1.5
+    0    0    0    0    0    0    0  588    0    0 |    d = 2
+    0    0    0    0    0    0    0  969    0    0 |    e = 2.5
+    0    0    0    0    0  844    0  704    0    0 |    f = 3
+    0    0    0    0    0    0    0 1973    0    0 |    g = 3.5
+    0    0    0    0    0    0    0 2277    0    0 |    h = 4
+    0    0    0    0    0    0    0  756    0    0 |    i = 4.5
+    0    0    0    0    0    0    0  362    0    0 |    j = 5
+

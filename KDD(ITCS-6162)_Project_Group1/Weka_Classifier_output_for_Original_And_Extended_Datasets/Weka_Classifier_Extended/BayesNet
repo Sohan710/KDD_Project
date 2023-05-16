@@ -1,0 +1,78 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     average_ratings_extended-weka.filters.unsupervised.attribute.Reorder-R1,2,4,5,6,7,3-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last-weka.filters.unsupervised.attribute.Discretize-B10-M-1.0-Rfirst-last-precision6
+Instances:    9053
+Attributes:   7
+              movieId
+              rating
+              genre
+              budget
+              language
+              Director
+              Average Rating
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Bayes Network Classifier
+not using ADTree
+#attributes=7 #classindex=6
+Network structure (nodes followed by parents)
+movieId(9053): Average Rating 
+rating(1279): Average Rating 
+genre(7): Average Rating 
+budget(5): Average Rating 
+language(5): Average Rating 
+Director(5): Average Rating 
+Average Rating(10): 
+LogScore Bayes: -196848.9467445176
+LogScore BDeu: -1663205.9190749372
+LogScore MDL: -1119109.70780453
+LogScore ENTROPY: -647673.2537352804
+LogScore AIC: -751162.2537352804
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        8361               92.3561 %
+Incorrectly Classified Instances       692                7.6439 %
+Kappa statistic                          0.9084
+Mean absolute error                      0.0367
+Root mean squared error                  0.1142
+Relative absolute error                 21.9775 %
+Root relative squared error             39.5249 %
+Total Number of Instances             9053     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.971    0.000    1.000      0.971    0.985      0.985    0.998     0.984     0.5
+                 0.967    0.000    0.981      0.967    0.973      0.973    0.998     0.982     1
+                 0.970    0.000    1.000      0.970    0.985      0.984    0.998     0.984     1.5
+                 0.949    0.003    0.959      0.949    0.954      0.951    0.998     0.981     2
+                 0.941    0.012    0.902      0.941    0.921      0.912    0.996     0.980     2.5
+                 0.934    0.026    0.880      0.934    0.906      0.887    0.995     0.981     3
+                 0.916    0.022    0.921      0.916    0.918      0.896    0.994     0.982     3.5
+                 0.913    0.023    0.931      0.913    0.922      0.896    0.994     0.985     4
+                 0.845    0.006    0.926      0.845    0.884      0.875    0.992     0.945     4.5
+                 0.989    0.001    0.986      0.989    0.988      0.987    0.999     0.995     5
+Weighted Avg.    0.924    0.017    0.924      0.924    0.924      0.907    0.995     0.980     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g    h    i    j   <-- classified as
+  101    0    0    0    0    0    1    2    0    0 |    a = 0.5
+    0  202    0    0    0    4    1    2    0    0 |    b = 1
+    0    0  259    0    0    3    2    3    0    0 |    c = 1.5
+    0    0    0  558    1   13    5    8    2    1 |    d = 2
+    0    0    0    4  912   17   19   14    2    1 |    e = 2.5
+    0    0    0    5   23 1446   31   34    9    0 |    f = 3
+    0    0    0    5   33   57 1808   55   14    1 |    g = 3.5
+    0    3    0    9   34   68   61 2078   23    1 |    h = 4
+    0    1    0    1    8   36   34   36  639    1 |    i = 4.5
+    0    0    0    0    0    0    2    1    1  358 |    j = 5
+
